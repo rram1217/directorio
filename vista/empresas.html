@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DIRECTORIO.COM</title>
+	</head>
+<body>
+<table class="verde" cellspacing=2 style="background-color:rgb(255, 255, 255, 0.4);">  
+	<form class="form-horizontal" method="POST" action="..." enctype="multipart/form-data" autocomplete="off" target="_self">			
+			<div align="center">
+
+			<tr><td align="left"><SIZE=6>nit</SIZE=6></td>
+				<td	align="center" colspan=6><input id="nit" type="number" class="form-control" name="nit" placeholder="Nit" required></td>
+			</tr>
+    	 	
+			<tr><td align="left"><SIZE=6>Razon Social</SIZE=6></td>
+				<td	align="center" colspan=6><input id="razon" type="varchar" class="form-control" name="razon" placeholder="Razon Social" required></td>
+				<td align="right">Nombre</td>
+		 		<td	align="center" colspan=6><input id="nombre" type="varchar" class="form-control" name="nombre" placeholder="Nombre" required></td>
+			</tr>
+  			<tr><td align="left"><SIZE=6>Descripcion</SIZE=6></td>
+				<td	align="center" colspan=6><input id="descripcion" type="text" class="form-control" name="descripcion" value="" placeholder="descripcion" required></td>
+				<td align="right"><size=6>Direccion</size=6></td>
+		 		<td	align="right" colspan=6><input id="direccion" type="varchar" class="form-control" name="direccion" placeholder="Direccion" required></td>
+			</tr>
+			<tr><td align="left"><SIZE=6>Telefono</SIZE=6></td>
+				<td	align="center" colspan=6><input id="telefono" type="number" class="form-control" name="telefono" placeholder="telefono" required></td>			
+				<td align="right">Celular</td>
+		 		<td	align="center" colspan=6><input id="celular" type="number" class="form-control" name="celular" placeholder="Celular" required></td>
+			<tr>
+				<td align="left"><SIZE=6>Email</SIZE=6></td>
+				<td	align="center" colspan=6><input id="email" type="email" class="form-control" name="email" placeholder="email" ></td>
+				<td align="right">Usuario</td>
+		 		<td	align="center" colspan=6><input id="usuario" type="text" class="form-control" name="usuario" placeholder="Usuario" required></td>
+		 	</tr>
+
+			<tr><td align="left"><SIZE=6>Estado</SIZE=6></td>
+				<td	align="center" colspan=6><input id="estado" type="text" class="form-control" name="estado" placeholder="estado" required></td>
+				<td align="right">SubCategoria</td>
+				<td><select name="subcategoria" id="subcategoria" class="form-control">
+				<option value="">-Seleccione uno-</option>
+					<?php
+    				$RSInv=$mysqli->query("SELECT * FROM subcategoria");
+      				while($vInv=mysqli_fetch_array($RSInv)){
+    				?>
+    			<option value="<?php echo $vInv['subcategoria_id']; ?>"><?php echo $vInv['nombre_subcategoria']; }?></option>
+				</select></td>
+			</tr>
+			<tr><th align="left"><size=6>Imagenes</size=6></th>
+				<td colspan="15"><center><input type="file" name="imagenes" id="imagenes" class="form-control"></center></td></tr>
+			
+			<tr><th colspan=12><a><center><input type="submit" class="btn btn-success" name="registrar" value="REGISTRAR"></center></a></th></tr>
+	</form>
+</table>
+
+</body>
+</html>

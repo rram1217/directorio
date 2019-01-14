@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background: black;
+}
+	
+header {
+	background: #893F9A;
+	margin-bottom:100;
+	
+}
+
+nav{
+	color:#FFF;
+	display:inline;
+	margin-top:100px;
+}
+
+
+a {
+	color: white;
+}
+
+#nombre {
+	color: white;
+	float:left;
+}
+
+
+img{
+	margin:10px 10px;
+	
+	float:left;
+	
+}
+
+from{
+	
+	background:#FFF;
+}
+
+
+li{
+	margin:50px 50px;
+	display:inline;
+	color:#999;
+}
+
+	
+
+
+
+	
+
+
+
+
+
+	
+
+
