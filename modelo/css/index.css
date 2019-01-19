@@ -108,15 +108,15 @@ img{
 
 .txt{
 	background-color: #FFF;
-	color: #FFF;
+	color: #000;
 	border:0px solid #823C92;
 	border-radius: 5px;
-  	padding: 14px 35px;
+  	padding: 14px 15px;
   	margin-right: 2%;
 
 	background-position: right center;
-	width:45%;
-	background-image: url(../../imagenes/buscar.png);
+	width:65%;
+	/* background-image: url(../../imagenes/buscar.png); */
 	background-repeat: no-repeat;
 	background-size: 12%;
 }

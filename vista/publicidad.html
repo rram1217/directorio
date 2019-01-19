@@ -1,13 +1,21 @@
 <table width="95%" align="center">
-	<tr>
-		<?php 
-			for ($i=1; $i <= 5; $i++) { 
-				echo "<td>
-							<div class='article'>
-								".$i."
-							</div>
-						</td>";
-			}
-		 ?>
-	</tr>
+	<?php 
+	$cantidad = 12;
+	$con=1;
+	for ($contador=1; $contador <= $cantidad; $contador++) { 		
+		echo "<tr>";
+				for ($i=1; $i <= 5; $i++) { 
+					if ($contador <= $cantidad) {
+						echo 	"<td>
+									<div class='article'>
+										".$contador."
+									</div>
+								</td>";
+						$contador++;
+					}
+				}
+		$contador--;
+		echo "</tr>";
+	}
+	?>
 </table>
