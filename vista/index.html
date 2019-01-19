@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>BuhOjea</title>
-	<link rel="stylesheet" href="css/index.css"/>
+	<link rel="stylesheet" href="../modelo/css/index.css"/>
 	<link rel="icon" type="image/png" href="../imagenes/logo_sin_fondo.png">
-	
+
 </head>
 <body>
 	<header>
@@ -28,14 +28,16 @@
 				<td align="right">
 						<input type="submit" class="boton" value="Seleccionar Ciudad">
 						<input type="submit" class="boton" value="Iniciar Sesion">
+						<a class="boton" href="index.html?op=empresas">Seleccionar Ciudad</a>
+						<a class="boton" href="index.html?op=empresas">Iniciar Sesion</a>
 				</td>
 			</tr>
 		</table>
 	</header>
 <br>
 	<div class="navbar">
-	  <a href="#home" class="active">Inicio</a>
-	  <a href="#news">Comidas</a>
+	  <a href="index.html?op=p" class="active">Inicio</a>
+	  <a href="index.html?op=empresas">Comidas</a>
 	  <a href="#contact">Ropa</a>
 	  <a href="#news">Salud</a>
 	  <a href="#contact">Hoteles</a>
@@ -47,35 +49,18 @@
 	
 	
 	</aside>
-	<table width="90%" align="center">
-		<tr>
-			<td>
-				<div class="article">
-					
-				</div>
-			</td><td>
-				<div class="article">
-					
-				</div>
-			</td>
-			<td>
-				<div class="article">
-					
-				</div>
-			</td>
-			<td>
-				<div class="article">
-					
-				</div>
-			</td>
-			<td>
-				<div class="article">
-					
-				</div>
-			</td>
-		</tr>
-	</table>
-
+	
+<div class="container">
+	<?php	
+	include('empresas.html');
+	$pagina = $_GET['op'];
+	if (empty($_GET['op']) == false && $_GET['op'] == 'p') {
+		include('empresas.html');
+		echo "string";
+	}		
+	?>		
+</div>
+<iframe src="empresas.html" ></iframe>
 	<section>		
 		<article>	</article>
 		
