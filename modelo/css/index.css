@@ -15,7 +15,7 @@ body{
 html, body{ 
 	margin:0; 
 	padding:0;  
-	height:85%;
+	height:100%;
 } 
 
 iframe { 
@@ -98,11 +98,34 @@ img{
 	border:0px solid #823C92;
 	border-radius: 5px;
   	padding: 14px 16px;
+	text-decoration: none;
 }
 
 .boton:hover{
 	background:#ddd;
   	color: black;
+}
+
+.txt{
+	background-color: #FFF;
+	color: #FFF;
+	border:0px solid #823C92;
+	border-radius: 5px;
+  	padding: 14px 35px;
+  	margin-right: 2%;
+
+	background-position: right center;
+	width:45%;
+	background-image: url(../../imagenes/buscar.png);
+	background-repeat: no-repeat;
+	background-size: 12%;
+}
+
+.buscar{
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 li{
@@ -150,6 +173,7 @@ li{
 	margin: 10px;
 	overflow: auto;
 	background-color:#FFF;
+	color: #000;
 	border:9px solid #823C92;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;

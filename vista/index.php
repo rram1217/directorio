@@ -20,16 +20,15 @@
 				</td>
 				<td align="center">
 					<form name="formIndex" id="formIndex" method="get">
-						<input type="txt">
-						<input type="submit" value="buscar">
-						<input type=image src="../imagenes/buscar.png" width="25">
+						<div class="buscar">
+							<input class="txt" type="txt">
+							<input type=image src="../imagenes/buscar.png" width="35">
+						</div>
 					</form>
 				</td>
 				<td align="right">
-						<input type="submit" class="boton" value="Seleccionar Ciudad">
-						<input type="submit" class="boton" value="Iniciar Sesion">
 						<a class="boton" href="index.php?op=empresas">Seleccionar Ciudad</a>
-						<a class="boton" href="index.php?op=empresas">Iniciar Sesion</a>
+						<a class="boton" href="index.php?op=usuarios">Iniciar Sesion</a>
 				</td>
 			</tr>
 		</table>
@@ -38,7 +37,7 @@
 	<div class="navbar">
 	  <a href="index.php?op=publicidad" class="active">Inicio</a>
 	  <a href="index.php?op=empresas">Comidas</a>
-	  <a href="#contact">Ropa</a>
+	  <a href="index.php?op=usuarios">Ropa</a>
 	  <a href="#news">Salud</a>
 	  <a href="#contact">Hoteles</a>
 	  <a href="#news">Educacion</a>
