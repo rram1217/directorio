@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-01-2019 a las 04:14:27
+-- Tiempo de generación: 20-01-2019 a las 05:58:44
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -25,39 +25,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `barrio`
---
-
-CREATE TABLE `barrio` (
-  `barrio_id` int(11) NOT NULL,
-  `descripcion` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `comuna` int(11) NOT NULL,
-  `latitud` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
-  `logitud` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
-  `ciudad_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `categoria`
 --
 
 CREATE TABLE `categoria` (
   `categoria_id` int(11) NOT NULL,
   `nombre_cat` varchar(30) COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `ciudad`
---
-
-CREATE TABLE `ciudad` (
-  `ciudad_id` int(11) NOT NULL,
-  `descripcion` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
-  `departamento_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -92,7 +65,10 @@ CREATE TABLE `empresa` (
   `subcategoria_id` int(11) NOT NULL,
   `estado_pago` tinyint(1) NOT NULL,
   `contador_emp` bigint(20) NOT NULL,
-  `barrio_id` int(11) NOT NULL
+  `logitud` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `latitud` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `ciudad` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `departamento_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -160,24 +136,10 @@ CREATE TABLE `usuario` (
 --
 
 --
--- Indices de la tabla `barrio`
---
-ALTER TABLE `barrio`
-  ADD PRIMARY KEY (`barrio_id`),
-  ADD KEY `ciudad_id` (`ciudad_id`);
-
---
 -- Indices de la tabla `categoria`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`categoria_id`);
-
---
--- Indices de la tabla `ciudad`
---
-ALTER TABLE `ciudad`
-  ADD PRIMARY KEY (`ciudad_id`),
-  ADD KEY `departamento_id` (`departamento_id`);
 
 --
 -- Indices de la tabla `departamento`
@@ -193,7 +155,7 @@ ALTER TABLE `empresa`
   ADD KEY `usuario_id` (`usuario_id`),
   ADD KEY `usuario_id_2` (`usuario_id`),
   ADD KEY `subcategoria_id` (`subcategoria_id`),
-  ADD KEY `barrio_id` (`barrio_id`);
+  ADD KEY `departamento_id` (`departamento_id`);
 
 --
 -- Indices de la tabla `imagen`
@@ -243,24 +205,12 @@ ALTER TABLE `usuario`
 --
 
 --
--- Filtros para la tabla `barrio`
---
-ALTER TABLE `barrio`
-  ADD CONSTRAINT `barrio_ibfk_1` FOREIGN KEY (`ciudad_id`) REFERENCES `ciudad` (`ciudad_id`);
-
---
--- Filtros para la tabla `ciudad`
---
-ALTER TABLE `ciudad`
-  ADD CONSTRAINT `ciudad_ibfk_1` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`departamento_id`);
-
---
 -- Filtros para la tabla `empresa`
 --
 ALTER TABLE `empresa`
   ADD CONSTRAINT `empresa_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`usuario_id`),
   ADD CONSTRAINT `empresa_ibfk_2` FOREIGN KEY (`subcategoria_id`) REFERENCES `subcategoria` (`subcategoria_id`),
-  ADD CONSTRAINT `empresa_ibfk_3` FOREIGN KEY (`barrio_id`) REFERENCES `barrio` (`barrio_id`);
+  ADD CONSTRAINT `empresa_ibfk_3` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`departamento_id`);
 
 --
 -- Filtros para la tabla `imagen`
