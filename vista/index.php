@@ -5,11 +5,27 @@
 	<meta charset="utf-8">
 	<title>BuhOjea</title>
 	<link rel="stylesheet" href="../modelo/css/index.css"/>
-	<link rel="icon" type="image/png" href="../imagenes/logo_sin_fondo.png">
-
+	<link rel="icon" type="image/png" href="../imagenes/logo_sin_fondo.png"/>
+    <?php
+        require 'conexionDb.php';
+            ?>
+    <script language="javascript" src="/jquery-3.3.1.min.js"></script>
+	<script language="javascript">
+		$(document).ready(function(){
+				$("#departamento").change(function () {
+					//$('#municipio').find('option').remove().end().append('<option value="whatever"></option>').val('whatever');
+					$("#departamento option:selected").each(function () {
+						departamento = $(this).val();
+						$.post("prueba.php", { departamento: departamento }, function(data){
+							$("#municipio").html(data);
+						});            
+					});
+				})
+			});
+    </script>
 </head>
+
 <body>
-	<header>
 		<table class="header" border="0">
 			<tr>
 				<td width="7%">
@@ -26,8 +42,24 @@
 						</div>
 					</form>
 				</td>
+
 				<td align="right">
-						<a class="boton" href="index.php?op=empresas">Seleccionar Ciudad</a>
+                		<?php  
+
+							$sql = "SELECT codigo,descripcion FROM departamento WHERE estado = 1";
+							$resultado = $mysqli->query($sql);				
+						?> 
+					<select class="boton" name="departamento" id="departamento">	
+                    		<option>DEPARTAMENTO</option>				
+						<?php while($row = mysqli_fetch_assoc($resultado)){
+								echo "<option value='".$row['codigo']."' >".$row['descripcion']."</option>"; 
+								}	
+						?>
+              		</select>
+                                      
+                    <select class="boton" name="municipio" id="municipio"></select>
+
+                    
 						<a class="boton" href="index.php?op=usuarios">Iniciar Sesion</a>
 				</td>
 			</tr>
@@ -48,13 +80,21 @@
 	
 	
 	</aside>
-	<br>
-<div class="container">
-	<?php	
-	$pagina = $_GET['op'];
-		include($pagina.'.html');
+	<br><div class="container">
+	<?php
+		if (empty($_GET['op'])==false){
+			$pagina = $_GET['op'];
+			include($pagina.'.html');
+		}
 	?>		
 </div>
+
+
+
+
+
+
+
 	<section>		
 		<article>	</article>
 		
