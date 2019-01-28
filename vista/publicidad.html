@@ -1,5 +1,8 @@
 <table width="95%" align="center">
 	<?php 
+	require '../controlador/conexionDb.php';
+	$sql = "SELECT * FROM empresa ";
+	$resultado = $mysqli->query($sql);
 	$cantidad = 12;
 	$con=1;
 	for ($contador=1; $contador <= $cantidad; $contador++) { 		

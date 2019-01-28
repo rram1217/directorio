@@ -99,6 +99,17 @@ img{
 	border-radius: 5px;
   	padding: 14px 16px;
 	text-decoration: none;
+	width: 30%;
+}
+
+.boton-select{
+	background-color: #000;
+	color: #FFF;
+	border:0px solid #823C92;
+	border-radius: 5px;
+  	padding: 14px 6px;
+	text-decoration: none;
+	width: 30%;
 }
 
 .boton:hover{
@@ -170,6 +181,7 @@ li{
 
 .article{
 	height: 260px;
+	width: 80%;
 	margin: 10px;
 	overflow: auto;
 	background-color:#FFF;
@@ -177,4 +189,7 @@ li{
 	border:9px solid #823C92;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+}
+.article:hover{
+	background: rgb(220,220,220,0.5);
 }
