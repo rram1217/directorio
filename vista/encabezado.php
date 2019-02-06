@@ -27,7 +27,7 @@
 				?>
       		</select>
             <select class="boton-select" name="municipio" id="municipio"></select>
-				<a class="boton" href="index.php?op=usuarios">Iniciar Sesion</a>
+				<a class="boton" href="inicio.html">Iniciar Sesion</a>
 		</td>
 	</tr>
 </table>

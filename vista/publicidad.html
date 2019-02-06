@@ -2,9 +2,9 @@
 	<?php 
 	require '../controlador/conexionDb.php';
 	$sql = "SELECT * FROM empresa ";
-	$resultado = $mysqli->query($sql);
 	$cantidad = 12;
 	$con=1;
+	$resultado = $mysqli->query($sql);
 	for ($contador=1; $contador <= $cantidad; $contador++) { 		
 		echo "<tr>";
 				for ($i=1; $i <= 5; $i++) { 
