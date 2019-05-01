@@ -8,7 +8,6 @@
 
 body {
 
-	background: url(../../imagenes/logos.png);
 	-webkit-background-size:  cover;
 	background-size: cover;
 	background-attachment: fixed;
@@ -18,7 +17,7 @@ body {
 
 .contenedor-form {
 	position: relative;
-	background: rgba(0,0,0,.7);
+	background: rgba(255,255,255,.4);
 	width: 100%;
 	max-width: 500px;
 	margin: 48px auto;
@@ -65,7 +64,8 @@ body {
 .contenedor-form input[type="email"],
 .contenedor-form input[type="number"],
 .contenedor-form input[type="varchar"],
-.contenedor-form input[type="date"]{
+.contenedor-form input[type="date"],
+.contenedor-form select{
 	outline: none;
 	background: rgba(0,0,0,.5);
 	display: block;

@@ -27,7 +27,10 @@
 				?>
       		</select>
             <select class="boton-select" name="municipio" id="municipio"></select>
-				<a class="boton" href="inicio.html">Iniciar Sesion</a>
+				<a class="boton" data-target href="index.php?log=inicio">Iniciar Sesion</a>
+				<div class="container section">
+					<button class="btn modal-trigger" data-target="modal" >iniciar</button>
+				</div>
 		</td>
 	</tr>
 </table>
