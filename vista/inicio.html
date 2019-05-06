@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +15,24 @@
 	
 	<div class="formulario">	
 		<h2>Iniciar Sesión</h2>
-		<form action="#">
+		<form id="loginform" method="POST" action="../controlador/iniciarsesion.php">
 			<input type="text" name="usuario" placeholder="Usuario" required>
-			<input type="password" name="cantraseña" placeholder="Contraseña" required>
+			<input type="password" name="contraseña" placeholder="Contraseña" required>
 			<input type="submit" value="Iniciar sesión">
+		</form>
+	</div>
+
+			<div class="reset-password">
+		<a href="recordar.php">Olvide mi Contraseña?</a>
+	</div>
+
+
+<div class="formularioo">	
+		<h2>Olvide mi Contraseña</h2>
+		<form id="loginform" method="POST" action="../controlador/iniciarsesion.php">
+			<input type="email" name="email" placeholder="Email" required>
+			
+			<input type="submit" value="Recordar">
 		</form>
 	</div>
 
@@ -84,9 +99,8 @@
 	</form>
 	</div>
 
-	<div class="reset-password">
-		<a href="#">Olvide mi Contraseña?</a>
-	</div>
+
+	
 	
 
 	<script src="../modelo/js/jquery-3.1.1.min.js"></script>
