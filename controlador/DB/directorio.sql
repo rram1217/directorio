@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-01-2019 a las 04:22:39
--- Versión del servidor: 10.1.37-MariaDB
--- Versión de PHP: 7.3.0
+-- Tiempo de generación: 01-05-2019 a las 23:15:30
+-- Versión del servidor: 10.1.21-MariaDB
+-- Versión de PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -784,9 +782,7 @@ CREATE TABLE `usuario` (
   `nombre` text COLLATE utf8_spanish_ci NOT NULL,
   `apellido` text COLLATE utf8_spanish_ci NOT NULL,
   `fecha_nacimiento` date NOT NULL,
-  `sexo` text COLLATE utf8_spanish_ci NOT NULL,
   `telefono` int(11) NOT NULL,
-  `direccion` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `email` varchar(40) COLLATE utf8_spanish_ci NOT NULL,
   `tipo_usuario_id` int(11) NOT NULL,
   `usuario` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
@@ -862,19 +858,16 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `municipio`
   MODIFY `municipio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=603;
-
 --
 -- AUTO_INCREMENT de la tabla `tipo_usuario`
 --
 ALTER TABLE `tipo_usuario`
   MODIFY `tipo_usuario_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `usuario_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- Restricciones para tablas volcadas
 --
@@ -910,7 +903,6 @@ ALTER TABLE `subcategoria`
 --
 ALTER TABLE `usuario`
   ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`tipo_usuario_id`) REFERENCES `tipo_usuario` (`tipo_usuario_id`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
