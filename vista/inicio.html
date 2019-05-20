@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +15,24 @@
 	
 	<div class="formulario">	
 		<h2>Iniciar Sesión</h2>
-		<form action="#">
+		<form id="loginform" method="POST" action="../controlador/iniciarsesion.php">
 			<input type="text" name="usuario" placeholder="Usuario" required>
-			<input type="password" name="cantraseña" placeholder="Contraseña" required>
+			<input type="password" name="contraseña" placeholder="Contraseña" required>
 			<input type="submit" value="Iniciar sesión">
+		</form>
+	</div>
+
+			<div class="reset-password">
+		<a href="recordar.php">Olvide mi Contraseña?</a>
+	</div>
+
+
+<div class="formularioo">	
+		<h2>Olvide mi Contraseña</h2>
+		<form id="loginform" method="POST" action="../controlador/iniciarsesion.php">
+			<input type="email" name="email" placeholder="Email" required>
+			
+			<input type="submit" value="Recordar">
 		</form>
 	</div>
 
@@ -38,11 +53,11 @@
 			<tr><td align="left"><size=6></size=6></td>
 				<td colspan="6"><select name="tipo" id="tipo" class="form-control">
 				<option value="">-Seleccione Tipo Documento-</option>		
-    			<option value="0">Cedula</option>
-    			<option value="1">Cedula Extrangeria</option>
-    			<option value="2">Pasaporte</option>
-    			<option value="3">Visa</option>
-    			<option value="4">Otra</option>
+    			<option value="Cedula">Cedula</option>
+    			<option value="cedula Extrangeria">Cedula Extrangeria</option>
+    			<option value="pasaporte">Pasaporte</option>
+    			<option value="Visa">Visa</option>
+    			<option value="Otra">Otra</option>
 				</select></td>
 				<td align="right"><size=6></size=6></td>
 		 		<td	align="center" colspan=6><input id="nombres" type="text" class="form-control" name="nombres" placeholder="Nombres" required></td>
@@ -50,17 +65,7 @@
   			<tr><td align="left"><SIZE=6></SIZE=6></td>
 				<td	align="center" colspan=6><input id="apellidos" type="text" class="form-control" name="apellidos" placeholder="Apellidos" required></td>
 				<td align="right"><SIZE=6></SIZE=6></td>
-		 		<td	align="left" colspan=6><input id="Fecha" type="date" class="form-control" name="fecha" placeholder="" required></td>
-			</tr>
-			<tr><td align="left"><SIZE=6></SIZE=6></td>
-				<td colspan="6"><select name="sexo" id="sexo" class="form-control">
-				<option value="">-Seleccione Sexo-</option>		
-    			<option value="0">Hombre</option>
-    			<option value="1">Mujer</option>
-    			<option value="2">Indefinido</option>
-    			</select></td>
-				<td align="right"></td>
-		 		<td	align="center" colspan=6><input id="direccion" type="varchar" class="form-control" name="direccion" placeholder="Direccion" required></td>
+		 		<td aling="left"> fecha de nacimiento</td><td	align="left" colspan=6><input id="Fecha" type="date" class="form-control" name="fecha" placeholder="" required></td>
 			</tr>
 			<tr><td><SIZE=6></SIZE=6></td>
 				<td	align="center" colspan=6><input id="telefono" type="number" class="form-control" name="telefono" placeholder="telefono" required></td>			
@@ -69,24 +74,23 @@
 				<td align="left"><SIZE=6></SIZE=6></td>
 				<td	align="center" colspan=6><input id="email" type="email" class="form-control" name="email" placeholder="email" ></td>
 				<td align="right"></td>
-		 		<td	align="center" colspan=6><input id="tipo_usuario" type="text" class="form-control" name="tipo_usuario" placeholder="Tipo Usuario" disabled=""></td>
+		 		<!--<td	align="center" colspan=6><input id="tipo_usuario" type="text" class="form-control" name="tipo_usuario" placeholder="Tipo Usuario" disabled=""></td>-->
 		 	</tr>
 
 			<tr><td align="left"><SIZE=6></SIZE=6></td>
 				<td	align="center" colspan=6><input id="usuario" type="varchar" class="form-control" name="usuario" placeholder="Usuario" required></td>
 				<td align="right"></td>
-		 		<td	align="center" colspan=6><input id="contraseña" type="varchar" class="form-control" name="contraseña" placeholder="******"></td>
+		 		<td	align="center" colspan=6><input id="contrasena" type="varchar" class="form-control" name="contrasena" placeholder="******"></td>
 				
 			</tr>
 			
-			<tr><th colspan=12><a><center><input type="submit" class="btn btn-success" name="registrar" value="REGISTRAR"></center></a></th></tr>
+			<tr><th colspan=12><a><center><input type="submit" class="btn btn-success" name="registrar" value="REGISTRA		R"></center></a></th></tr>
 		</div>
 	</form>
 	</div>
 
-	<div class="reset-password">
-		<a href="#">Olvide mi Contraseña?</a>
-	</div>
+
+	
 	
 
 	<script src="../modelo/js/jquery-3.1.1.min.js"></script>
