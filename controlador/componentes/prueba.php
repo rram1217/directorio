@@ -1,5 +1,5 @@
 <?php
-	require '../controlador/conexionDb.php';
+	require '../controlador/conexion.php';
 	$codigodepartamento = $_POST['departamento'];
 	$consultamunicipio = "SELECT * FROM municipio WHERE departamento_id = '$codigodepartamento'";
 	$resultado = $mysqli->query($consultamunicipio);
