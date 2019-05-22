@@ -1,1 +1,1 @@
-directorio
+DIRECTORIO
