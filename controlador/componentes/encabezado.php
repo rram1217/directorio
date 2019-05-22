@@ -1,7 +1,7 @@
 <table class="header" border="0">
 	<tr>
 		<td width="7%">
-			<img src="../imagenes/logo_sin_fondo.png" height="50" alt="">
+			<img src="../../vista/img/logo_sin_fondo.png" height="50" alt="">
 		</td>
 		<td align="left" width="20%">
 			<a id="nombre">BuhOjea.com</a>

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="../../modelo/css/estilos.css">
 	<script src="../../modelo/js/jquery-3.1.1.min.js"></script>
 	<script src="../../modelo/js/main.js"></script>
-	<link rel="icon" type="image/png" href="../imagenes/logo_sin_fondo.png"/>
+	<link rel="icon" type="image/png" href="../../vista/img/logo_sin_fondo.png"/>
 
 	<!---->
 	<meta charset="UTF-8" />
