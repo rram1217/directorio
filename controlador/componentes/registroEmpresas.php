@@ -1,33 +1,15 @@
-<?php  
-$id=0;
-$a1=$_POST['documento'];
-$a2=$_POST['tipo'];
-$a3=$_POST['nombres'];
-$a4=$_POST['apellidos'];
-$a5=$_POST['fecha'];
-$a6=$_POST['telefono'];
-$a7=$_POST['email'];
-$a8=1;	
-$a9=$_POST['usuario'];
-$a10=$_POST['contrasena'];
-//$subcategoria=1;
+<?php
+$id = 0;
+$documento = $_POST['documento'];
+$tipo = $_POST['tipo'];
+$nombres = $_POST['nombres'];
+$apellidos = $_POST['apellidos'];
+$fecha = $_POST['fecha'];
+$telefono = $_POST['telefono'];
+$email = $_POST['email'];
+$a8 = 1;
+$usuario = $_POST['usuario'];
+$contrasenia = $_POST['contrasena'];
+require '../dao/conexion.php';
+$result = $mysqli->query("INSERT INTO usuario (usuario_id,num_doc,tipo_doc,nombre,apellido,fecha_nacimiento,telefono,email,tipo_usuario_id,usuario,contrasena)VALUES('$id','$documento','$tipo','$nombres','$apellidos','$fecha','$telefono','$email','$a8','$usuario','$contrasenia')");
 
-
-
-
-
-
-//	$empresa=1;
-//	$estado=1;
-//	$estado_pago="inactivo";
-//	$contador=1;
-//	$barrio=1;
-
-require 'conexion.php';
-
-	 $result = $mysqli-> query("INSERT INTO usuario (usuario_id,num_doc,tipo_doc,nombre,apellido,fecha_nacimiento,telefono,email,tipo_usuario_id,usuario,contrasena)VALUES('$id','$a1','$a2','$a3','$a4','$a5','$a6','$a7','$a8','$a9','$a10')")		
-
-
-
-
-?>

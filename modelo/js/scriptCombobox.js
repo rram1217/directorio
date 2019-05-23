@@ -1,5 +1,5 @@
-<script language="javascript" src="../modelo/jquery-3.3.1.min.js"></script>
-	<script language="javascript">
+<script language="javascript" src="jquery-3.3.1.min.js"/>
+	<script; language="javascript">
 		$(document).ready(function(){
 				$("#departamento").change(function () {
 					//$('#municipio').find('option').remove().end().append('<option value="whatever"></option>').val('whatever');
@@ -7,7 +7,7 @@
 						departamento = $(this).val();
 						$.post("prueba.php", { departamento: departamento }, function(data){
 							$("#municipio").html(data);
-						});            
+						});
 					});
 				})
 			});

@@ -35,8 +35,7 @@ ul {
     box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
 }
 
-.contact-wrapper > 
- {
+.contact-wrapper > {
     padding: 1em;
 }
 
@@ -100,17 +99,20 @@ ul {
 }
 
 /* LARGE SIZE */
-@media(min-width: 700px) {
+@media (min-width: 700px) {
     body {
         padding: 0 4em;
     }
+
     .contact-wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
+
     .contact-wrapper > * {
         padding: 2em;
     }
+
     .contact-info h4,
     .contact-info ul,
     .contact-info p {
