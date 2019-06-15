@@ -5,7 +5,7 @@
 					//$('#municipio').find('option').remove().end().append('<option value="whatever"></option>').val('whatever');
 					$("#departamento option:selected").each(function () {
 						departamento = $(this).val();
-						$.post("prueba.php", { departamento: departamento }, function(data){
+						$.post("../../controlador/componentes/prueba.php", { departamento: departamento }, function(data){
 							$("#municipio").html(data);
 						});
 					});

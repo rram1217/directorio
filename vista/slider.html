@@ -1,3 +1,4 @@
+
 <div class="container">
     <style type="text/css">
         .tamanio {
@@ -6,54 +7,33 @@
         }
     </style>
     <div class="wrapper">
-
         <ul id="sb-slider" class="sb-slider">
-            <li>
-                <a href="#" target="_blank"><img class="tamanio" src="1.png" alt="img_1"/></a>
-                <div class="sb-description">
-                    <h3>jhanner ureña</h3>
-                </div>
-            </li>
-            <li>
-                <a href="#" target="_blank"><img class="tamanio" src="2.png" alt="img_2"/></a>
-                <div class="sb-description">
-                    <h3>Kevin Enrique Arciniegas </h3>
-                </div>
-            </li>
-            <li>
-                <a href="#" target="_blank"><img class="tamanio" src="5.png" alt="img_3"/></a>
-                <div class="sb-description">
-                    <h3>rafael ricardo mendieta</h3>
-                </div>
-            </li>
-            <li>
-                <a href="#" target="_blank"><img class="tamanio" src="4.png" alt="img_4"/></a>
-                <div class="sb-description">
-                    <h3>wilmer andres mojica</h3>
-                </div>
-            </li>
-            <li>
-                <a href="#" target="_blank"><img class="tamanio" src="5.png" alt="img_5"/></a>
-                <div class="sb-description">
-                    <h3>yurandier nuñez</h3>
-                </div>
-            </li>
-            <li>
-                <a href="#" target="_blank"><img class="tamanio" src="1.png" alt="img_6"/></a>
-                <div class="sb-description">
-                    <h3>leonardo posada</h3>
-                </div>
-            </li>
-            <li>
-                <a href="#" target="_blank"><img class="tamanio" src="2.png" alt="img_7"/></a>
-                <div class="sb-description">
-                    <h3>Atardecer en el mar</h3>
-                </div>
-            </li>
+            <table width="95%" align="center">
+                <?php
+                require '../dao/conexion.php';
+                $sql = "SELECT * FROM imagen ";
+                $cantidad = 3;
+                $con = 1;
+                $contador = 0;
+                $resultado = $mysqli->query($sql);
+                while ($row = mysqli_fetch_assoc($resultado)) {
+                    if ($contador <= $cantidad) {
+                        echo "  <li>
+                                    <a href='#' target='_blank'>
+                                        <img class='tamanio' src='".$row['ruta_url']."' alt='img_1'/></a>
+                                    <div class='sb-description'>
+                                        <h3>".$row['descripcion']."</h3>
+                                    </div>
+                                </li>";
+                        $contador++;
+                    }
+                    $contador--;
+                    echo "</tr>";
+                }
+                ?>
+            </table>
         </ul>
-
         <div id="shadow" class="shadow"></div>
-
         <div id="nav-arrows" class="nav-arrows">
             <a href="#">Next</a>
             <a href="#">Previous</a>
@@ -63,7 +43,7 @@
 
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script type="text/javascript" src="../modelo/js/slider/jquery.slicebox.js"></script>
+<script type="text/javascript" src="../../modelo/js/slider/jquery.slicebox.js"></script>
 <script type="text/javascript">
     $(function () {
 
@@ -76,42 +56,27 @@
 
                         $navArrows.show();
                         $shadow.show();
-
                     },
                     orientation: 'r',
                     //	cuboidsRandom : true
                     autoplay: true
                 }),
-
                 init = function () {
-
                     initEvents();
-
                 },
                 initEvents = function () {
-
                     // add navigation events
                     $navArrows.children(':first').on('click', function () {
-
                         slicebox.next();
                         return false;
-
                     });
-
                     $navArrows.children(':last').on('click', function () {
-
                         slicebox.previous();
                         return false;
-
                     });
-
                 };
-
             return {init: init};
-
         })();
-
         Page.init();
-
     });
 </script>

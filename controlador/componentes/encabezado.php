@@ -10,7 +10,7 @@
             <form name="formIndex" id="formIndex" method="get">
                 <div class="buscar">
                     <input class="txt" type="txt">
-                    <input type=image src="../imagenes/buscar.png" width="35">
+                    <input type=image src="../../vista/img/buscar.png" width="35">
                 </div>
             </form>
         </td>
@@ -27,10 +27,7 @@
                 ?>
             </select>
             <select class="boton-select" name="municipio" id="municipio"></select>
-            <a class="boton" data-target href="index.php?log=inicio">Iniciar Sesion</a>
-            <div class="container section">
-                <button class="btn modal-trigger" data-target="modal">iniciar</button>
-            </div>
+            <a class="boton" data-target href="index.php?log=../../vista/inicio.html">Iniciar Sesion</a>
         </td>
     </tr>
 </table>

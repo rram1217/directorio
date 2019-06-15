@@ -11,9 +11,9 @@
     <!---->
     <meta charset="UTF-8"/>
     <title>index_slider</title>
-    <link rel="stylesheet" type="text/css" href="../../vista/img/css/slider/slicebox.css"/>
-    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+    <link rel="stylesheet" type="text/css" href="../../modelo/css/slider/slicebox.css"/>
+    <link rel="stylesheet" type="text/css" href="../../modelo/css/slider/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="../../modelo/css/slider/custom.css"/>
     <script type="text/javascript" src="../../modelo/js/slider/modernizr.custom.46884.js"></script>
     <?php
     require '../dao/conexion.php';
